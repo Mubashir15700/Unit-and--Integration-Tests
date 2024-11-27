@@ -1,3 +1,4 @@
+import "@testing-library/jest-dom";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import Form from "../pages/Form";
 import * as formUtils from "../utils/formUtils"; // Import the module containing fetchUserData
