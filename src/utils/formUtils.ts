@@ -18,8 +18,10 @@ export const fetchUserData = async (searchData: {
   phone: number;
 }) => {
   const queryParams = [
-    searchData.userName && `${inputNames.userName}=${searchData.userName}`,
-    searchData.phone && `${inputNames.phone}=${searchData.phone}`,
+    searchData.userName &&
+      `${inputNames.userName.toLocaleLowerCase()}=${searchData.userName}`,
+    searchData.phone &&
+      `${inputNames.phone.toLocaleLowerCase()}=${searchData.phone}`,
   ]
     .filter(Boolean)
     .join(ampersand);
